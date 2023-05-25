@@ -15,6 +15,18 @@ header {
     align-items: center;
 }
 
+footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 6px;
+    background-color: #30471E;
+    position: relative;
+    top: 60vh;
+    padding: 5vw;
+}
+
 a{
     text-decoration: none;
 }
@@ -124,7 +136,7 @@ img:nth-child(5) {
 
 .intruducao {
     position: relative;
-    top: 37vh;
+    top: 50vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
@@ -163,10 +175,72 @@ img:nth-child(5) {
     border-radius: 7%;
 }
 
-
-.app{
-    position: relative;
-    top: 20vh;
+.foto-pizza{
     display: flex;
     justify-content: center;
+}
+
+.aplicativo{
+    position: relative;
+    top: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+}
+
+.aplicativo h2{
+    font-size: 1.1rem;
+    width: 60vw;
+    text-align: center;
+    color: #BD3623;
+    font-style: oblique;
+}
+
+.aplicativo p{
+    text-align: justify;
+    width: 70%;
+}
+
+.app{
+    display: flex;
+    justify-content: center;
+}
+
+.avaliacoes{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 5vh;
+    justify-items: center;
+}
+
+.card{
+    position: relative;
+    top: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #A5B2AC;
+    border: 5px #707774c1 solid;
+    width: 50vw;
+    height: auto;
+    border-radius: 10%;
+    padding: 2vh;
+    -webkit-box-shadow: 2px 1px 37px 5px rgba(87,94,91,0.82); 
+    box-shadow: 2px 1px 37px 5px rgba(87,94,91,0.82);
+}
+
+.card:hover{
+    transform: scale(1.1);
+    border: 5px #65febcc1 solid;
+}
+
+.card img{
+    width: 80%;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+}
+
+.card h4{
+    margin: 1vh;
 }
