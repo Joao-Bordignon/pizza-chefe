@@ -1,0 +1,388 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    width: auto;
+    background-color: rgba(243, 37, 37, 0.945);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+footer {
+    width: 100%;
+    height: 280vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 20vh;
+    background-color: #30471E;
+    position: relative;
+    top: 0;
+}
+
+footer h3 {
+    font-size: 1.3rem;
+    padding-bottom: 2vh;
+    border-bottom: #000000 solid 1vw;
+    width: 40vw;
+    text-align: center;
+}
+
+.nav-bar-pc {
+    display: none;
+}
+
+.icones {
+    display: flex;
+    flex-direction: column;
+}
+
+.icones img {
+    padding: 2vw;
+}
+
+.contato,
+.maps,
+.social,
+.unidade {
+    margin: 2vw;
+    height: 40vh;
+}
+
+.contato,
+.maps p,
+.social,
+.unidade {
+    font-size: 1.2rem;
+}
+
+.creditos {
+    height: 10vh;
+    position: relative;
+    top: 10vh;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.mostrar-menu {
+    cursor: pointer;
+}
+
+input.checkbox-menu[type="checkbox"] {
+    display: none;
+    appearance: unset;
+    -webkit-appearance: none;
+}
+
+input.checkbox-menu[type="checkbox"]:checked ~ div.menu-recolhivel {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-icon {
+    display: inline-block;
+    padding: 0.5em;
+    vertical-align: middle;
+}
+
+.menu-recolhivel {
+    display: inline-block;
+    opacity: 0;
+    vertical-align: middle;
+    visibility: hidden;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -ms-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+}
+
+ul.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.menu li {
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: 0 5px;
+}
+
+ul.menu li a {
+    color: #000000;
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+}
+
+ul.menu li a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.conta {
+    display: flex;
+    flex-direction: row;
+}
+
+.foto-perfil {
+    margin: 1vw;
+}
+
+.foto-perfil img {
+    border-radius: 50%;
+}
+
+.perfil {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.perfil h4 {
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.perfil p {
+    border-radius: 5px;
+    letter-spacing: 0.2em;
+    padding: 1.5vw;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: rgba(113, 20, 20, 0.945);
+}
+
+.perfil p:hover {
+    background-color: rgba(215, 34, 34, 0.945);
+}
+
+.cardapio {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 25px;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    justify-items: center;
+}
+
+.item {
+    position: relative;
+    width: 70vw;
+    height: 30vh;
+    box-shadow: 0 1px 13px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 120ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #B29047;
+    padding: 0.5em 0.5em 4.4em;
+}
+
+.item::after {
+    content: "COMPRAR";
+    padding-top: 1.25em;
+    padding-left: 1.25em;
+    position: absolute;
+    left: 0;
+    bottom: -60px;
+    background: #00AC7C;
+    color: #fff;
+    height: 2.5em;
+    width: 94%;
+    transition: all 80ms;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0;
+}
+
+.item .tipo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    position: absolute;
+    left: 0.625em;
+    bottom: 2.35em;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.item .ingredientes {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    position: absolute;
+    left: 0.625em;
+    bottom: 1.65em;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.item .preço {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1em;
+    position: absolute;
+    left: 0.625em;
+    bottom: 0.35em;
+    color: #ffffff;
+    letter-spacing: 0.25rem;
+}
+
+.item:hover::after {
+    bottom: 0;
+    opacity: 1;
+}
+
+.item:active {
+    transform: scale(0.98);
+}
+
+.item:active::after {
+    content: "Adicionado no carrinho!";
+    height: 3.125em;
+}
+
+.imagem {
+    background: rgb(241, 241, 241);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*celulares menores*/
+@media only screen and (min-width: 375px) {
+
+    .imagem img {
+        width: 70vw;
+        height: 30vh;
+    }
+
+}
+
+/* Tablets */
+
+@media only screen and (min-width: 481px) {
+
+    .imagem img {
+        width: 70vw;
+        height: 30vh;
+    }
+
+}
+
+@media only screen and (min-width: 769px) {
+
+    header {
+        display: none;
+    }
+
+    .nav-bar-pc {
+        width: 100%;
+        background-color: rgba(243, 37, 37, 0.945);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+    }
+
+    .menu-pc ul {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .menu-pc li {
+        display: flex;
+        padding-right: 5vw;
+        font-size: 1.5rem;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    .menu-pc li:hover {
+        text-decoration: underline;
+    }
+
+    .perfil p {
+        border-radius: 5px;
+        letter-spacing: 0.2em;
+        padding: 0.4vw;
+        font-weight: bold;
+        font-size: 0.9rem;
+        background-color: rgba(113, 20, 20, 0.945);
+    }
+
+    .cardapio {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+
+    .item{
+        width: 20vw;
+        height: 40vh;
+    }
+
+    .imagem img {
+        width: 20vw;
+        height: 40vh;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0 0;
+        grid-auto-flow: row;
+        grid-template-areas: 
+        "unidade contato" 
+        "social maps" 
+        "creditos creditos";
+        height: 170vh;
+    }
+
+    .creditos {
+        justify-self: center;
+        align-self: center;
+        grid-area: creditos;
+    }
+
+    .unidade {
+        grid-area: unidade;
+    }
+
+    .contato {
+        grid-area: contato;
+    }
+
+    .social {
+        grid-area: social;
+    }
+
+    .maps {
+        grid-area: maps;
+    }
+
+}

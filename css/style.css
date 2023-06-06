@@ -238,7 +238,7 @@ img:nth-child(5) {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
-    grid-row-gap: 5vh;
+    grid-row-gap: 10vh;
     justify-items: center;
 }
 
@@ -248,12 +248,13 @@ img:nth-child(5) {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: #A5B2AC;
     border: 5px #707774c1 solid;
     width: 60vw;
-    height: 50vh;
+    height: 100%;
     border-radius: 10%;
-    padding: 2vh;
+    padding: 2vw;
     -webkit-box-shadow: 2px 1px 37px 5px rgba(87,94,91,0.82);
     box-shadow: 2px 1px 37px 5px rgba(87,94,91,0.82);
 }
@@ -287,7 +288,7 @@ img:nth-child(5) {
 .social,
 .unidade {
     height: 40vh;
-    padding: 5vw;
+    margin: 2vw;
 }
 
 .contato,
@@ -330,42 +331,127 @@ img:nth-child(5) {
     grid-area: 4 / 1 / 5 / 2;
 }
 
-.conteudo{
+.conteudo {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
     text-align: justify;
-    max-height: 100vh;
+    max-height: 120vh;
 }
 
-.conteudo h1{
+.conteudo h1 {
     font-size: 2.5rem;
     text-transform: uppercase;
     font-style: oblique;
+    text-align: center;
 }
 
-.conteudo p{
+.conteudo p {
     margin: 5vw;
     font-size: 1.2rem;
     color: #999b9b;
 }
 
-.imagens{
+.imagens {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.imagens img{
+.imagens img {
     margin-bottom: 5vh;
     border: #999b9b solid 3vw;
     border-radius: 10%;
     transition: 0.5s all ease-in-out;
 }
 
-.imagens img:hover{
+.imagens img:hover {
     transform: scale(1.1);
+}
+
+/*contato CSS*/
+
+.background {
+    background-color: #471e1e;
+    height: 100vh;
+    clip-path: ellipse(55vw 35vh at 50% 42%);
+}
+
+.Login {
+    margin: auto;
+    position: relative;
+    top: 20vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFD882;
+    max-height: 50vh;
+    max-width: 90vw;
+    overflow: hidden;
+    border-radius: 10%;
+    box-shadow: 7px 7px 10px 3px #B29047;
+}
+
+.area-login {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vh;
+    padding: 1vw;
+}
+
+#chk {
+    display: none;
+}
+
+.cadastro {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.cadastro label {
+    margin: 10% 0;
+}
+
+.formulario {
+    color: #000000;
+    text-align: center;
+    width: 50vw;
+    font-size: 3rem;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.input {
+    width: 70vw;
+    height: vh;
+    background: #e0dede;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+
+.area-login button {
+    width: 50vw;
+    height: 4vh;
+    margin: 12px auto 10%;
+    color: #fff;
+    background: #B29047;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.area-login button:hover {
+    background-color: #B29047;
 }
 
 /* Tablets */
@@ -401,6 +487,26 @@ img:nth-child(5) {
         text-align: center;
     }
 
+    /*sobre css*/
+
+    .conteudo {
+        max-height: 150vh;
+    }
+
+    footer {
+        position: none;
+        height: 500vh;
+    }
+
+    /*contato CSS*/
+
+    .background {
+        clip-path: ellipse(55vw 45vh at 50% 49%);
+    }
+
+    .Login {
+        max-height: 110vh;
+    }
 }
 
 /*Desktop*/
@@ -540,5 +646,144 @@ img:nth-child(5) {
 
     .creditos {
         top: 20vh;
+    }
+
+    /*sobre css*/
+
+    .main {
+        margin: 5vw;
+        gap: 30vh;
+    }
+
+    .conteudo {
+        flex-direction: row;
+        justify-content: center;
+        max-height: 80vh;
+    }
+
+    .conteudo > img {
+        width: 40vw;
+        margin: 5vw;
+    }
+
+    .conteudo-texto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+        width: 40vw;
+    }
+
+    .conteudo-texto p {
+        margin: 2vh;
+    }
+
+    .qualidade > .conteudo {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .qualidade-paragrafo {
+        width: 50vw;
+    }
+
+    .galeria > .conteudo {
+        flex-direction: column;
+    }
+
+    .imagens {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 10vw;
+        grid-row-gap: 10vh;
+    }
+
+    .imagens img {
+        border: #999b9b solid 1vw;
+        width: 30vw;
+    }
+
+    /*contato CSS*/
+    .background {
+        background-color: #471e1e;
+        height: 100vh;
+        clip-path: ellipse(25vw 45vh at 50% 52%);
+    }
+    
+    .Login {
+        margin: auto;
+        position: relative;
+        top: 20vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #FFD882;
+        max-height: 80vh;
+        max-width: 30vw;
+        overflow: hidden;
+        border-radius: 10%;
+        box-shadow: 7px 7px 10px 3px #B29047;
+    }
+    
+    .area-login {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 1vh;
+        padding: 1vw;
+    }
+    
+    #chk {
+        display: none;
+    }
+    
+    .cadastro {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .cadastro label {
+        margin: 10% 0;
+    }
+    
+    .formulario {
+        color: #000000;
+        text-align: center;
+        width: 20vw;
+        font-size: 3rem;
+        justify-content: center;
+        display: flex;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
+    }
+    
+    .input {
+        width: 20vw;
+        height: 5vh;
+        background: #e0dede;
+        padding: 10px;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+    }
+    
+    .area-login button {
+        width: 15vw;
+        height: 4vh;
+        margin: 12px auto 10%;
+        color: #fff;
+        background: #B29047;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: 0.2s ease-in;
+    }
+    
+    .area-login button:hover {
+        background-color: #B29047;
     }
 }
