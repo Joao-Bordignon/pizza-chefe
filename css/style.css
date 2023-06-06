@@ -25,7 +25,7 @@ footer {
     grid-row-gap: 20vh;
     background-color: #30471E;
     position: relative;
-    top: 60vh;
+    top: 80vh;
 }
 
 footer h3 {
@@ -375,7 +375,7 @@ img:nth-child(5) {
 .background {
     background-color: #471e1e;
     height: 100vh;
-    clip-path: ellipse(55vw 35vh at 50% 42%);
+    clip-path: ellipse(55vw 50vh at 50% 42%);
 }
 
 .Login {
