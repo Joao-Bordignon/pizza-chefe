@@ -1,0 +1,209 @@
+body {
+    margin: 0;
+}
+
+nav {
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(243, 37, 37, 0.945);
+}
+
+nav img {
+    filter:drop-shadow(1px 2px 1px #000000);
+}
+
+nav p {
+    font-size: 0.95em;
+    font-family: Arial Black;
+}
+
+.Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: 0.3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: rgb(0, 0, 0);
+}
+
+.sign {
+    width: 100%;
+    transition-duration: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign svg {
+    width: 17px;
+}
+
+.sign svg path {
+    fill: white;
+}
+
+.text {
+    position: absolute;
+    right: 0;
+    width: 0;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: 0.3s;
+}
+
+.Btn:hover {
+    width: 125px;
+    border-radius: 40px;
+    transition-duration: 0.3s;
+}
+
+.Btn:hover .sign {
+    width: 30%;
+    transition-duration: 0.3s;
+    padding-left: 20px;
+}
+
+.Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: 0.3s;
+    padding-right: 10px;
+}
+
+.Btn:active {
+    transform: translate(2px ,2px);
+}
+
+.informações{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.total-pedidos, .receita-gerada{
+    background-color: rgba(198, 196, 196, 0.593);
+    border: 4px ridge #0000009e;
+    font-family: Arial Black;
+    text-align: center;
+    width: 80%;
+    margin: 3vh;
+    border-radius: 0.8em;
+}
+
+.valor{
+    color: rgba(121, 199, 3, 0.851)
+}
+
+.area-pedidos{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pedidos{
+    padding: 2vw;
+    margin: 8vw;
+    border: 7px solid #000000;
+    font-size: 1.2em;
+}
+
+ .numero-pedido{
+    border-bottom: 2px solid grey;
+ }
+
+ .prod, .qntd, .val{
+    border: 2px solid grey;
+    padding: 1vw;
+ }
+
+.colunas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.valor-pedido{
+    border-top: 2px solid grey;
+    font-family: arial black;
+}
+
+.limpar {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+    background: #e62222;
+   }
+   
+   .limpar, .limpar span {
+    transition: 200ms;
+   }
+   
+   .limpar .texto {
+    transform: translateX(35px);
+    color: white;
+    font-weight: bold;
+   }
+   
+   .limpar .icone {
+    position: absolute;
+    border-left: 1px solid #c41b1b;
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   
+   .limpar svg {
+    width: 15px;
+    fill: #eee;
+   }
+   
+   .limpar:hover {
+    background: #ff3636;
+   }
+   
+   .limpar:hover .texto {
+    color: transparent;
+   }
+   
+   .limpar:hover .icone {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+   }
+   
+   .limpar:focus {
+    outline: none;
+   }
+   
+   .limpar:active .icone svg {
+    transform: scale(0.8);
+   }

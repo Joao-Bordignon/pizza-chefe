@@ -1,0 +1,62 @@
+dialog::backdrop{
+    background-color: rgba(58, 57, 57, 0.595);
+    backdrop-filter: blur(1.8px);
+}
+
+p{
+    margin: 0;
+}
+
+.finalcompra{
+    border: 0;
+    border-radius: 2em;
+    box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.236);
+}
+
+.finalcompra .restaurante{
+    display: flex;
+    flex-direction: row;
+}
+
+.loading{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.loader {
+    display: block;
+    --height-of-loader: 4px;
+    --loader-color: rgb(255, 51, 0);
+    width: 130px;
+    height: var(--height-of-loader);
+    border-radius: 30px;
+    background-color: rgba(0,0,0,0.2);
+    position: relative;
+  }
+  
+  .loader::before {
+    content: "";
+    position: absolute;
+    background: var(--loader-color);
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 30px;
+    animation: moving 3s ease-in-out infinite;
+    ;
+  }
+  
+  @keyframes moving {
+    50% {
+      width: 100%;
+    }
+  
+    100% {
+      width: 0;
+      right: 0;
+      left: unset;
+    }
+  }
